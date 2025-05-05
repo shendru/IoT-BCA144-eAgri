@@ -9,33 +9,33 @@ interface Props {
 function SectionCard({ setActiveSection, sectionName }: Props) {
   const [iot, setIOT] = useState<any>();
 
-  useEffect(() => {
-    async function fetchThingSpeakData() {
-      const channelID = "2947060";
-      const apiKey = "PARCRO443GXQRC7G";
-      const url = `https://api.thingspeak.com/channels/${channelID}/feeds.json?results=1&api_key=${apiKey}`;
-      try {
-        let response = await fetch(url);
-        let data = await response.json();
-        let feeds = data.feeds;
+  // useEffect(() => {
+  //   async function fetchThingSpeakData() {
+  //     const channelID = "2947060";
+  //     const apiKey = "PARCRO443GXQRC7G";
+  //     const url = `https://api.thingspeak.com/channels/${channelID}/feeds.json?results=1&api_key=${apiKey}`;
+  //     try {
+  //       let response = await fetch(url);
+  //       let data = await response.json();
+  //       let feeds = data.feeds;
 
-        setIOT(feeds[0]);
-        console.log("Gathering IoT Data");
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    }
+  //       setIOT(feeds[0]);
+  //       console.log("Gathering IoT Data");
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   }
 
-    fetchThingSpeakData();
+  //   fetchThingSpeakData();
 
-    const interval = setInterval(fetchThingSpeakData, 1000);
+  //   const interval = setInterval(fetchThingSpeakData, 1000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
-  useEffect(() => {
-    console.log("Updated IoT Data:", iot);
-  }, [iot]);
+  // useEffect(() => {
+  //   console.log("Updated IoT Data:", iot);
+  // }, [iot]);
   return (
     <section className="absolute px-5 bg-white w-[20%] right-[0.5rem] top-[0.5rem] rounded-lg">
       <X
