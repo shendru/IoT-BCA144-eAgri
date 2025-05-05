@@ -39,8 +39,58 @@ function Dashboard() {
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 </p>
               </div>
+            </div>
 
-              <section></section>
+            <div className="flex flex-col gap-[1rem] mt-[1rem]">
+              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
+                <div>
+                  <p>Section 1</p>
+                  <p>Calamansi</p>
+                </div>
+                <div>95%</div>
+              </section>
+              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
+                <div>
+                  <p>Section 1</p>
+                  <p>Calamansi</p>
+                </div>
+                <div>95%</div>
+              </section>
+              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
+                <div>
+                  <p>Section 1</p>
+                  <p>Calamansi</p>
+                </div>
+                <div>95%</div>
+              </section>
+              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
+                <div>
+                  <p>Section 1</p>
+                  <p>Calamansi</p>
+                </div>
+                <div>95%</div>
+              </section>
+              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
+                <div>
+                  <p>Section 1</p>
+                  <p>Calamansi</p>
+                </div>
+                <div>95%</div>
+              </section>
+              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
+                <div>
+                  <p>Section 1</p>
+                  <p>Calamansi</p>
+                </div>
+                <div>95%</div>
+              </section>
+              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
+                <div>
+                  <p>Section 1</p>
+                  <p>Calamansi</p>
+                </div>
+                <div>95%</div>
+              </section>
             </div>
           </div>
         </div>
