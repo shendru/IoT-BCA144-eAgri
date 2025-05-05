@@ -7,7 +7,7 @@ import Plant3 from "../../assets/plant_3.png";
 import Plant4 from "../../assets/plant_4.png";
 import Plant5 from "../../assets/plant_5.png";
 import Plant6 from "../../assets/plant_6.png";
-import { Maximize, CircleHelp, CircleDot } from "lucide-react";
+import { Maximize, CircleHelp, CircleDot, HeartPulse } from "lucide-react";
 import SectionCard from "../card/SectionCard";
 
 function Dashboard() {
@@ -42,54 +42,89 @@ function Dashboard() {
             </div>
 
             <div className="flex flex-col gap-[1rem] mt-[1rem]">
-              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
+              <section className="bg-[#FDFCFF] border-black/10 border-1 shadow-xl flex justify-between px-2 py-3 rounded-lg">
                 <div>
-                  <p>Section 1</p>
-                  <p>Calamansi</p>
+                  <p className="text-lg font-bold">Section 1</p>
+                  <p className="text-[0.7rem] text-black/50 font-bold">
+                    {"Calamansi (microcarpa)"}
+                  </p>
                 </div>
-                <div>95%</div>
+                <div className="text-green-600">
+                  <div className="bg-green-600/10 gap-1 flex px-2 rounded-md">
+                    <HeartPulse className="w-[15px]" />
+                    <span>95%</span>
+                  </div>
+                </div>
               </section>
-              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
+              <section className="bg-[#FDFCFF] border-black/10 border-1 shadow-xl flex justify-between px-2 py-3 rounded-lg">
                 <div>
-                  <p>Section 1</p>
-                  <p>Calamansi</p>
+                  <p className="text-lg font-bold">Section 1</p>
+                  <p className="text-[0.7rem] text-black/50 font-bold">
+                    {"Calamansi (microcarpa)"}
+                  </p>
                 </div>
-                <div>95%</div>
+                <div className="text-green-600">
+                  <div className="bg-green-600/10 gap-1 flex px-2 rounded-md">
+                    <HeartPulse className="w-[15px]" />
+                    <span>95%</span>
+                  </div>
+                </div>
               </section>
-              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
+              <section className="bg-[#FDFCFF] border-black/10 border-1 shadow-xl flex justify-between px-2 py-3 rounded-lg">
                 <div>
-                  <p>Section 1</p>
-                  <p>Calamansi</p>
+                  <p className="text-lg font-bold">Section 1</p>
+                  <p className="text-[0.7rem] text-black/50 font-bold">
+                    {"Calamansi (microcarpa)"}
+                  </p>
                 </div>
-                <div>95%</div>
+                <div className="text-green-600">
+                  <div className="bg-green-600/10 gap-1 flex px-2 rounded-md">
+                    <HeartPulse className="w-[15px]" />
+                    <span>95%</span>
+                  </div>
+                </div>
               </section>
-              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
+              <section className="bg-[#FDFCFF] border-black/10 border-1 shadow-xl flex justify-between px-2 py-3 rounded-lg">
                 <div>
-                  <p>Section 1</p>
-                  <p>Calamansi</p>
+                  <p className="text-lg font-bold">Section 1</p>
+                  <p className="text-[0.7rem] text-black/50 font-bold">
+                    {"Calamansi (microcarpa)"}
+                  </p>
                 </div>
-                <div>95%</div>
+                <div className="text-green-600">
+                  <div className="bg-green-600/10 gap-1 flex px-2 rounded-md">
+                    <HeartPulse className="w-[15px]" />
+                    <span>95%</span>
+                  </div>
+                </div>
               </section>
-              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
+              <section className="bg-[#FDFCFF] border-black/10 border-1 shadow-xl flex justify-between px-2 py-3 rounded-lg">
                 <div>
-                  <p>Section 1</p>
-                  <p>Calamansi</p>
+                  <p className="text-lg font-bold">Section 1</p>
+                  <p className="text-[0.7rem] text-black/50 font-bold">
+                    {"Calamansi (microcarpa)"}
+                  </p>
                 </div>
-                <div>95%</div>
+                <div className="text-green-600">
+                  <div className="bg-green-600/10 gap-1 flex px-2 rounded-md">
+                    <HeartPulse className="w-[15px]" />
+                    <span>95%</span>
+                  </div>
+                </div>
               </section>
-              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
+              <section className="bg-[#FDFCFF] border-black/10 border-1 shadow-xl flex justify-between px-2 py-3 rounded-lg">
                 <div>
-                  <p>Section 1</p>
-                  <p>Calamansi</p>
+                  <p className="text-lg font-bold">Section 1</p>
+                  <p className="text-[0.7rem] text-black/50 font-bold">
+                    {"Calamansi (microcarpa)"}
+                  </p>
                 </div>
-                <div>95%</div>
-              </section>
-              <section className="bg-[#DCDCDC] flex justify-between p-2 rounded-lg">
-                <div>
-                  <p>Section 1</p>
-                  <p>Calamansi</p>
+                <div className="text-green-600">
+                  <div className="bg-green-600/10 gap-1 flex px-2 rounded-md">
+                    <HeartPulse className="w-[15px]" />
+                    <span>95%</span>
+                  </div>
                 </div>
-                <div>95%</div>
               </section>
             </div>
           </div>
