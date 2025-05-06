@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "header": "Calamansi",
+    "section": "Section 1",
+    "status": "Active",
+    "price": "₱76/kg",
+    "harvestDate": "2025-06-01",
+    "quantity": "10 kg"
+  },
+  {
+    "id": 2,
+    "header": "Calamansi",
+    "section": "Section 4",
+    "status": "InActive",
+    "price": "₱23/kg",
+    "harvestDate": "2025-05-05",
+    "quantity": "5 kg"
+  },
+  {
+    "id": 3,
+    "header": "Calamansi",
+    "section": "Section 2",
+    "status": "InActive",
+    "price": "₱27/kg",
+    "harvestDate": "2025-05-24",
+    "quantity": "7 kg"
+  },
+  {
+    "id": 4,
+    "header": "Calamansi",
+    "section": "Section 1",
+    "status": "InActive",
+    "price": "₱25/kg",
+    "harvestDate": "2025-05-13",
+    "quantity": "6 kg"
+  },
+  {
+    "id": 5,
+    "header": "Calamansi",
+    "section": "Section 5",
+    "status": "InActive",
+    "price": "₱29/kg",
+    "harvestDate": "2025-05-23",
+    "quantity": "8 kg"
+  },
+  {
+    "id": 6,
+    "header": "Calamansi",
+    "section": "Section 3",
+    "status": "InActive",
+    "price": "₱22/kg",
+    "harvestDate": "2025-05-16",
+    "quantity": "4 kg"
+  },
+  {
+    "id": 7,
+    "header": "Calamansi",
+    "section": "Section 6",
+    "status": "InActive",
+    "price": "₱26/kg",
+    "harvestDate": "2025-05-08",
+    "quantity": "6 kg"
+  },
+  {
+    "id": 8,
+    "header": "Calamansi",
+    "section": "Section 2",
+    "status": "InActive",
+    "price": "₱24/kg",
+    "harvestDate": "2025-05-21",
+    "quantity": "7 kg"
+  },
+  {
+    "id": 9,
+    "header": "Calamansi",
+    "section": "Section 4",
+    "status": "InActive",
+    "price": "₱28/kg",
+    "harvestDate": "2025-05-26",
+    "quantity": "9 kg"
+  },
+  {
+    "id": 10,
+    "header": "Calamansi",
+    "section": "Section 3",
+    "status": "InActive",
+    "price": "₱21/kg",
+    "harvestDate": "2025-05-23",
+    "quantity": "5 kg"
+  },
+  {
+    "id": 11,
+    "header": "Calamansi",
+    "section": "Section 6",
+    "status": "InActive",
+    "price": "₱30/kg",
+    "harvestDate": "2025-05-28",
+    "quantity": "10 kg"
+  }
+]

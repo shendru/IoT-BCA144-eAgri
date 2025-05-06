@@ -1,5 +1,6 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Data2 from "../../app/dashboard/data2.json";
 import {
   DndContext,
   KeyboardSensor,
@@ -200,7 +201,7 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
     header: "Status",
     cell: ({ row }) => (
       <Badge variant="outline" className="text-muted-foreground px-1.5">
-        {row.original.status === "Done" ? (
+        {row.original.status === "Active" ? (
           <IconCircleCheckFilled className="fill-green-500 dark:fill-green-400" />
         ) : (
           <IconLoader />
@@ -323,6 +324,7 @@ export function DataTable({
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
+
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [pagination, setPagination] = React.useState({
     pageIndex: 0,
@@ -511,7 +513,12 @@ export function DataTable({
                     <Label htmlFor="name" className="text-right">
                       Name
                     </Label>
-                    <Input id="name" defaultValue="" className="col-span-3" />
+                    <Input
+                      id="name"
+                      value={"Calamansi"}
+                      defaultValue=""
+                      className="col-span-3"
+                    />
                   </div>
                 )}
                 {selectedSection === "Section 1" && (
@@ -547,6 +554,7 @@ export function DataTable({
                     className="cursor-pointer"
                     type="submit"
                     onClick={() => {
+                      setData(Data2);
                       setImage(false);
                     }}
                   >
