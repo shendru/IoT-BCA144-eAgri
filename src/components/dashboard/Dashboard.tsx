@@ -1,5 +1,3 @@
-import React from "react";
-import GoatTestImage from "../../assets/goat-test-img.jpg";
 import GoatLiveFootage from "../../assets/video/goat-live.mp4";
 
 function Dashboard() {

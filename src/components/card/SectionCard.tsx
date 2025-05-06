@@ -9,33 +9,33 @@ interface Props {
 function SectionCard({ setActiveSection, sectionName }: Props) {
   const [iot, setIOT] = useState<any>();
 
-  // useEffect(() => {
-  //   async function fetchThingSpeakData() {
-  //     const channelID = "2947060";
-  //     const apiKey = "PARCRO443GXQRC7G";
-  //     const url = `https://api.thingspeak.com/channels/${channelID}/feeds.json?results=1&api_key=${apiKey}`;
-  //     try {
-  //       let response = await fetch(url);
-  //       let data = await response.json();
-  //       let feeds = data.feeds;
+  useEffect(() => {
+    async function fetchThingSpeakData() {
+      const channelID = "2947060";
+      const apiKey = "PARCRO443GXQRC7G";
+      const url = `https://api.thingspeak.com/channels/${channelID}/feeds.json?results=1&api_key=${apiKey}`;
+      try {
+        let response = await fetch(url);
+        let data = await response.json();
+        let feeds = data.feeds;
 
-  //       setIOT(feeds[0]);
-  //       console.log("Gathering IoT Data");
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   }
+        setIOT(feeds[0]);
+        console.log("Gathering IoT Data");
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
 
-  //   fetchThingSpeakData();
+    fetchThingSpeakData();
 
-  //   const interval = setInterval(fetchThingSpeakData, 1000);
+    const interval = setInterval(fetchThingSpeakData, 1000);
 
-  //   return () => clearInterval(interval);
-  // }, []);
+    return () => clearInterval(interval);
+  }, []);
 
-  // useEffect(() => {
-  //   console.log("Updated IoT Data:", iot);
-  // }, [iot]);
+  useEffect(() => {
+    console.log("Updated IoT Data:", iot);
+  }, [iot]);
   return (
     <section className="absolute px-5 bg-white w-[20%] right-[0.5rem] top-[0.5rem] rounded-lg">
       <X
@@ -49,7 +49,13 @@ function SectionCard({ setActiveSection, sectionName }: Props) {
       </div>
       <div className="mb-2">
         <p className="text-sm text-black/30 font-bold">Health</p>
-        <p className="text-green-700">90% - Good</p>
+        <p className="text-green-700">
+          {sectionName === "Section 4"
+            ? "76% - Good"
+            : sectionName === "Section 5"
+            ? "57% - Good"
+            : "95% - Good"}
+        </p>
       </div>
       <div className="mb-2">
         <p className="text-sm text-black/30 font-bold">Last Harvest</p>
@@ -72,9 +78,25 @@ function SectionCard({ setActiveSection, sectionName }: Props) {
           <p>{iot ? `${iot.field1} °C` : "Loading..."}</p>
         </div>
       </div>
-      <div className="mb-5">
-        <p className="text-sm text-black/30 font-bold">Soil Mosture</p>
-        <p>{iot ? `${iot.field3} %` : "Loading..."}</p>
+      <div className="flex mb-5">
+        <div className="flex-1">
+          <p className="text-sm text-black/30 font-bold">Soil Moisture</p>
+          {sectionName !== "Section 4" && (
+            <p>{iot ? `${iot.field3} %` : "Loading..."}</p>
+          )}
+          {sectionName === "Section 4" && <p>{"0.0037 %"}</p>}
+        </div>
+        <div className="flex-1">
+          <p
+            className={`text-sm ${
+              sectionName === "Section 5" ? "text-red-500" : "text-black/30"
+            } font-bold`}
+          >
+            pH Level
+          </p>
+          {sectionName === "Section 5" && <p>4.3</p>}
+          {sectionName !== "Section 5" && <p>7.2</p>}
+        </div>
       </div>
     </section>
   );

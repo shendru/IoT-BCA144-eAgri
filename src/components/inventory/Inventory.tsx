@@ -1,6 +1,5 @@
-import React from "react";
-import { SectionCards } from "@/components/section-cards";
-import { DataTable } from "@/components/data-table";
+import { SectionCards } from "./section-cards";
+import { DataTable } from "./data-table";
 
 import data from "../../app/dashboard/data.json";
 

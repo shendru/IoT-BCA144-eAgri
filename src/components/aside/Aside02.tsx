@@ -1,5 +1,9 @@
-import React from "react";
-import { LayoutDashboard, Computer, SlidersHorizontal } from "lucide-react";
+import {
+  LayoutDashboard,
+  Computer,
+  SlidersHorizontal,
+  LogOut,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 function Aside() {
@@ -19,6 +23,9 @@ function Aside() {
           <div className="flex gap-[1rem] cursor-pointer">
             <SlidersHorizontal className="w-[40px]" /> <p>Settings</p>
           </div>
+          <Link className="flex gap-[1rem] cursor-pointer" to={"/"}>
+            <LogOut className="w-[40px]" /> <p>Logout</p>
+          </Link>
         </section>
       </section>
     </aside>

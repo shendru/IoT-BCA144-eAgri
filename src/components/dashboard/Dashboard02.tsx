@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import GreenHouse from "../../assets/greenhouse.jpeg";
 import Plant1 from "../../assets/plant_1.png";
@@ -7,7 +6,14 @@ import Plant3 from "../../assets/plant_3.png";
 import Plant4 from "../../assets/plant_4.png";
 import Plant5 from "../../assets/plant_5.png";
 import Plant6 from "../../assets/plant_6.png";
-import { Maximize, CircleHelp, CircleDot, HeartPulse } from "lucide-react";
+import {
+  Maximize,
+  CircleHelp,
+  CircleDot,
+  HeartPulse,
+  TriangleAlert,
+  Droplet,
+} from "lucide-react";
 import SectionCard from "../card/SectionCard";
 
 function Dashboard() {
@@ -24,19 +30,21 @@ function Dashboard() {
           <div>
             <p className="font-bold mb-3">Overall health:</p>
             <div className="flex">
-              <div className="w-[30%] flex">
+              <div className="w-[30%] flex items-center">
                 <p className="text-[3rem] items-center">
-                  92<span className="text-black/40 text-[2rem]">%</span>
+                  86<span className="text-black/40 text-[2rem]">%</span>
                 </p>
               </div>
-              <div className="flex-1 flex flex-col justify-center">
+              <div className="flex-1 flex gap-2 flex-col justify-center">
                 <div className="flex">
                   <p className="px-2 text-sm text-white bg-green-600 rounded-3xl">
                     Good
                   </p>
                 </div>
                 <p className="text-sm">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Most plant sections are thriving. Section 5 shows signs of
+                  sickness, while Section 4 has low water levels and may need
+                  irrigation.
                 </p>
               </div>
             </div>
@@ -58,7 +66,7 @@ function Dashboard() {
               </section>
               <section className="bg-[#FDFCFF] border-black/10 border-1 shadow-xl flex justify-between px-2 py-3 rounded-lg">
                 <div>
-                  <p className="text-lg font-bold">Section 1</p>
+                  <p className="text-lg font-bold">Section 2</p>
                   <p className="text-[0.7rem] text-black/50 font-bold">
                     {"Calamansi (microcarpa)"}
                   </p>
@@ -72,7 +80,7 @@ function Dashboard() {
               </section>
               <section className="bg-[#FDFCFF] border-black/10 border-1 shadow-xl flex justify-between px-2 py-3 rounded-lg">
                 <div>
-                  <p className="text-lg font-bold">Section 1</p>
+                  <p className="text-lg font-bold">Section 3</p>
                   <p className="text-[0.7rem] text-black/50 font-bold">
                     {"Calamansi (microcarpa)"}
                   </p>
@@ -86,35 +94,47 @@ function Dashboard() {
               </section>
               <section className="bg-[#FDFCFF] border-black/10 border-1 shadow-xl flex justify-between px-2 py-3 rounded-lg">
                 <div>
-                  <p className="text-lg font-bold">Section 1</p>
+                  <p className="text-lg font-bold">Section 4</p>
                   <p className="text-[0.7rem] text-black/50 font-bold">
                     {"Calamansi (microcarpa)"}
                   </p>
                 </div>
-                <div className="text-green-600">
-                  <div className="bg-green-600/10 gap-1 flex px-2 rounded-md">
+                <div className="text-yellow-500">
+                  <div className="bg-yellow-300/10 gap-1 flex px-2 rounded-md">
+                    <Droplet className="w-[15px]" />
+                    <span>Low</span>
+                  </div>
+                </div>
+                <div className="text-yellow-500">
+                  <div className="bg-yellow-300/10 gap-1 flex px-2 rounded-md">
                     <HeartPulse className="w-[15px]" />
-                    <span>95%</span>
+                    <span>76%</span>
                   </div>
                 </div>
               </section>
               <section className="bg-[#FDFCFF] border-black/10 border-1 shadow-xl flex justify-between px-2 py-3 rounded-lg">
                 <div>
-                  <p className="text-lg font-bold">Section 1</p>
+                  <p className="text-lg font-bold">Section 5</p>
                   <p className="text-[0.7rem] text-black/50 font-bold">
                     {"Calamansi (microcarpa)"}
                   </p>
                 </div>
-                <div className="text-green-600">
-                  <div className="bg-green-600/10 gap-1 flex px-2 rounded-md">
+                <div className="text-yellow-500">
+                  <div className="bg-yellow-300/10 gap-1 flex px-2 rounded-md">
+                    <TriangleAlert className="w-[15px]" />
+                    <span>Sick Plant</span>
+                  </div>
+                </div>
+                <div className="text-yellow-500">
+                  <div className="bg-yellow-300/10 gap-1 flex px-2 rounded-md">
                     <HeartPulse className="w-[15px]" />
-                    <span>95%</span>
+                    <span>57%</span>
                   </div>
                 </div>
               </section>
               <section className="bg-[#FDFCFF] border-black/10 border-1 shadow-xl flex justify-between px-2 py-3 rounded-lg">
                 <div>
-                  <p className="text-lg font-bold">Section 1</p>
+                  <p className="text-lg font-bold">Section 6</p>
                   <p className="text-[0.7rem] text-black/50 font-bold">
                     {"Calamansi (microcarpa)"}
                   </p>
@@ -147,6 +167,7 @@ function Dashboard() {
                     className="cursor-pointer rounded-full border-white/20 text-white bg-white/30 backdrop-blur-md border p-1 w-fit"
                     onClick={() => {
                       setActiveSection("Section 1");
+                      setAnalytic(false);
                     }}
                   >
                     <CircleDot className="w-4 h-4" />
