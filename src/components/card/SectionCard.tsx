@@ -57,15 +57,15 @@ function SectionCard({ setActiveSection, sectionName }: Props) {
           }`}
         >
           {sectionName === "Section 4"
-            ? "76% - Good"
+            ? "76% - Okay"
             : sectionName === "Section 5"
-            ? "57% - Good"
+            ? "57% - Poor"
             : "95% - Good"}
         </p>
       </div>
       <div className="mb-2">
         <p className="text-sm text-black/30 font-bold">Last Harvest</p>
-        <p>15/08/2024</p>
+        <p>15/08/2025</p>
       </div>
       <div className="mb-2">
         {sectionName === "Section 1" && (
@@ -78,7 +78,7 @@ function SectionCard({ setActiveSection, sectionName }: Props) {
             <p className="text-sm text-black/30 font-bold">
               Next Harvest Prediction
             </p>
-            <p>29/09/2024 - 45 Days</p>
+            <p>20/06/2025 - 45 Days</p>
           </>
         )}
       </div>
@@ -95,7 +95,13 @@ function SectionCard({ setActiveSection, sectionName }: Props) {
       </div>
       <div className="flex mb-5">
         <div className="flex-1">
-          <p className="text-sm text-black/30 font-bold">Soil Moisture</p>
+          <p
+            className={`text-sm ${
+              sectionName === "Section 4" ? "text-red-500" : "text-black/30"
+            } font-bold`}
+          >
+            Soil Moisture
+          </p>
           {sectionName !== "Section 4" && (
             <p>{iot ? `${iot.field3} %` : "Loading..."}</p>
           )}
