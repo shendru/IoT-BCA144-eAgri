@@ -479,12 +479,6 @@ export function DataTable({
                   )}
                 </div>
                 <div className="grid grid-cols-4 items-center gap-4">
-                  <Label htmlFor="name" className="text-right">
-                    Name
-                  </Label>
-                  <Input id="name" defaultValue="" className="col-span-3" />
-                </div>
-                <div className="grid grid-cols-4 items-center gap-4">
                   <Label htmlFor="username" className="text-right">
                     Section
                   </Label>
@@ -507,24 +501,40 @@ export function DataTable({
                     </SelectContent>
                   </Select>
                 </div>
-                <div className="grid grid-cols-4 items-center gap-4">
-                  <Label htmlFor="price" className="text-right">
-                    Price
-                  </Label>
-                  <div className="col-span-3">
-                    <Input id="price" defaultValue="" className="w-full" />
-                    <p className="mt-1 text-sm text-gray-500">
-                      Suggested Retail Price: ₱74.31 - ₱96.64 per kg
-                    </p>
+                {selectedSection === "Section 1" && (
+                  <div className="grid grid-cols-4 items-center gap-4">
+                    <Label htmlFor="name" className="text-right">
+                      Name
+                    </Label>
+                    <Input id="name" defaultValue="" className="col-span-3" />
                   </div>
-                </div>
+                )}
+                {selectedSection === "Section 1" && (
+                  <div className="grid grid-cols-4 items-center gap-4">
+                    <Label htmlFor="price" className="text-right">
+                      Price
+                    </Label>
+                    <div className="col-span-3">
+                      <Input id="price" defaultValue="" className="w-full" />
+                      <p className="mt-1 text-sm text-gray-500">
+                        Suggested Retail Price: ₱74.31 - ₱96.64 per kg
+                      </p>
+                    </div>
+                  </div>
+                )}
 
-                <div className="grid grid-cols-4 items-center gap-4">
-                  <Label htmlFor="username" className="text-right">
-                    Quantity
-                  </Label>
-                  <Input id="username" defaultValue="" className="col-span-3" />
-                </div>
+                {selectedSection === "Section 1" && (
+                  <div className="grid grid-cols-4 items-center gap-4">
+                    <Label htmlFor="username" className="text-right">
+                      Quantity
+                    </Label>
+                    <Input
+                      id="username"
+                      defaultValue=""
+                      className="col-span-3"
+                    />
+                  </div>
+                )}
               </div>
               <DialogFooter>
                 <DialogClose asChild>
