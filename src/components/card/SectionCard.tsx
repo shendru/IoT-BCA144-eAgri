@@ -68,10 +68,19 @@ function SectionCard({ setActiveSection, sectionName }: Props) {
         <p>15/08/2024</p>
       </div>
       <div className="mb-2">
-        <p className="text-sm text-black/30 font-bold">
-          Next Harvest Prediction
-        </p>
-        <p>29/09/2024 - 45 Days</p>
+        {sectionName === "Section 1" && (
+          <>
+            <p className="text-sm text-green-700 font-bold">Ready To Harvest</p>
+          </>
+        )}
+        {sectionName !== "Section 1" && (
+          <>
+            <p className="text-sm text-black/30 font-bold">
+              Next Harvest Prediction
+            </p>
+            <p>29/09/2024 - 45 Days</p>
+          </>
+        )}
       </div>
       <div className="border-b-1 border-black/20 mb-2"></div>
       <div className="flex mb-2">
