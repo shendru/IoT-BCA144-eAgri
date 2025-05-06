@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Data2 from "../../app/dashboard/data2.json";
 import {
   DndContext,
