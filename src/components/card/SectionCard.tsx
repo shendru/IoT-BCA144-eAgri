@@ -49,7 +49,13 @@ function SectionCard({ setActiveSection, sectionName }: Props) {
       </div>
       <div className="mb-2">
         <p className="text-sm text-black/30 font-bold">Health</p>
-        <p className="text-green-700">
+        <p
+          className={`${
+            sectionName === "Section 4" || sectionName === "Section 5"
+              ? "text-yellow-500"
+              : "text-green-700"
+          }`}
+        >
           {sectionName === "Section 4"
             ? "76% - Good"
             : sectionName === "Section 5"

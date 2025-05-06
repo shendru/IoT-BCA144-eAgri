@@ -109,7 +109,11 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogClose,
 } from "@/components/ui/dialog";
+
+import EmptyImg from "../../assets/empty.png";
+import Calamansi from "../../assets/calamansi.jpg";
 
 export const schema = z.object({
   id: z.number(),
@@ -331,6 +335,8 @@ export function DataTable({
     useSensor(KeyboardSensor, {})
   );
 
+  const [image, setImage] = React.useState(false);
+
   const dataIds = React.useMemo<UniqueIdentifier[]>(
     () => data?.map(({ id }) => id) || [],
     [data]
@@ -458,6 +464,20 @@ export function DataTable({
                 </DialogDescription>
               </DialogHeader>
               <div className="grid gap-4 py-4">
+                <div className="w-full relative">
+                  {!image && <img src={EmptyImg} className="w-full" alt="" />}
+                  {image && <img src={Calamansi} className="w-full" alt="" />}
+                  {!image && (
+                    <Button
+                      className="cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                      onClick={() => {
+                        setImage(true);
+                      }}
+                    >
+                      Add Image
+                    </Button>
+                  )}
+                </div>
                 <div className="grid grid-cols-4 items-center gap-4">
                   <Label htmlFor="name" className="text-right">
                     Name
@@ -501,7 +521,17 @@ export function DataTable({
                 </div>
               </div>
               <DialogFooter>
-                <Button type="submit">Save changes</Button>
+                <DialogClose asChild>
+                  <Button
+                    className="cursor-pointer"
+                    type="submit"
+                    onClick={() => {
+                      setImage(false);
+                    }}
+                  >
+                    Save changes
+                  </Button>
+                </DialogClose>
               </DialogFooter>
             </DialogContent>
           </Dialog>
