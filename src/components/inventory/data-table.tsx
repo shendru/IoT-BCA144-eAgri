@@ -20,7 +20,7 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import {
-  IconChevronDown,
+  // IconChevronDown,
   IconChevronLeft,
   IconChevronRight,
   IconChevronsLeft,
@@ -28,9 +28,9 @@ import {
   IconCircleCheckFilled,
   IconDotsVertical,
   IconGripVertical,
-  IconLayoutColumns,
+  // IconLayoutColumns,
   IconLoader,
-  IconPlus,
+  // IconPlus,
   IconTrendingUp,
 } from "@tabler/icons-react";
 import {
@@ -74,7 +74,7 @@ import {
 } from "@/components/ui/drawer";
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
+  // DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
@@ -87,7 +87,7 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
+  // SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -501,6 +501,11 @@ export function DataTable({
                     </SelectContent>
                   </Select>
                 </div>
+                {selectedSection !== "Section 1" && (
+                  <p className="mt-1 text-sm text-center text-red-500">
+                    {selectedSection !== "" && "Not Yet Ready For Harvest"}
+                  </p>
+                )}
                 {selectedSection === "Section 1" && (
                   <div className="grid grid-cols-4 items-center gap-4">
                     <Label htmlFor="name" className="text-right">
